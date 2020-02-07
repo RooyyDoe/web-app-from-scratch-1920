@@ -15,9 +15,12 @@ import createCard from '../modules/createCard.js';
     // appendChild
     main.appendChild(container)
 
+    // Loads in the first 20 results
     showResults(url)
 
+    // Function to show the results
     function showResults(url){
+        
         return Fetcher.get(url)
         .then(({results:gameResults, next} ) => {
             gameResults.forEach(data => {  
@@ -26,11 +29,11 @@ import createCard from '../modules/createCard.js';
             return next;
         })
         .then((next) => {
-            console.log(next)
             const button = document.getElementById("loadMore")
             if(button && next) {
                 // button exists
                 // button needs to be updated
+                
                 button.setAttribute('value', next)
                 console.log(next)
             } else if (next){
@@ -48,7 +51,7 @@ import createCard from '../modules/createCard.js';
 
                 main.appendChild(button)
             } else {
-                document.getElementById("button-2").remove();
+                document.getElementById("loadMore").remove();
             }
         })
     }
