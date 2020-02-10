@@ -77,6 +77,8 @@ The data that I will be using for my applicatipon is comming directly come out o
 
 This API is working with pagination, this will mean that I will get only 20 results when I make a call. This also can be extended by `page_size`. This call will be to heavy to render and will slow down the productivity of the application by big numbers. That's why I am going to use a `loadMore` function.
 
+***
+
 In the **Genre page** I am using this API endpoint: 
 
 > https://api.rawg.io/api/genres
@@ -106,6 +108,8 @@ This will be returning the following data:
  ```
  
 </details>
+
+***
 
 In the **Game overview page** I am using this API endpoint: 
 
@@ -146,7 +150,9 @@ This will be returning the following data:
  
  ```
  
-</details>
+</details> 
+
+***
 
 In the **Detail page** I am using this API endpoint: 
 
@@ -206,6 +212,8 @@ This will be returning the following data of the game:
  ```
  
 </details>
+
+***
 
 
 
