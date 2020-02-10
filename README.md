@@ -36,7 +36,7 @@ This is a list of things I want to do in this course:
 ### Week Two
 
 - [X] Expanding my `README.md` with extra information
-- [ ] Make an Actor diagram.
+- [X] Make an Actor diagram.
 - [ ] Make an interaction diagram.
 - [ ] Use routing for the detail pages.
 - [ ] Use a templating engine.
@@ -68,6 +68,8 @@ Run the index.html into your browser
 ## How It Works
 
 ### Actor diagram
+
+<img width="934" alt="Schermafdruk 2020-02-10 17 37 53" src="https://user-images.githubusercontent.com/40355914/74169770-28807280-4c2c-11ea-8795-d72f0aa6b447.png">
 
 ### Interaction diagram
 
