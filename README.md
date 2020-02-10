@@ -47,7 +47,7 @@ This is a list of things I want to do in this course:
 
 ## Description
 
-In the start screen of my product users will be able to select an game genre that they prefer or want to know more about. When they have selected one genre they will be navigated to an new page where all the games of this genre will be generated in. When the user wants to know more about one specific game you will be able to select this game and it will show a detail page of this game. 
+In the start screen of my product users are presented with a list of all gaming genres. The user can select a genre out of this list that the user wants to know more about by clicking on it. The user is then directed to a new page where all the games within the selected genre are presented in a list in the same way as the genres were previously. The games within the selected genre are obtained using an RAWG API. The user is now able to select one of these games in the list to obtain more detailed information about it. When a certain game is selected, the user will be navigated to a new page with all sorts of details about the game.
 
 ## Usage
 
