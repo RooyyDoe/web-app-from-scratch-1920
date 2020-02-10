@@ -73,6 +73,8 @@ Run the index.html into your browser
 
 ### Interaction diagram
 
+![InteractionDiagram](https://user-images.githubusercontent.com/40355914/74184653-70f95980-4c47-11ea-8b5c-30951f68fae1.png)
+
 ## API
 
 The data that I will be using for my applicatipon is comming directly come out of the [RAWG API](https://rawg.io/). This is the largest open video games database that there is. **RAWG** is sharing around 350,000+ games, search, and machine learning recommendations with the world.
