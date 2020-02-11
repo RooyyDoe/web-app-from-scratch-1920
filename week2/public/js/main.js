@@ -15,7 +15,7 @@ import createCard from '../modules/createCard.js';
     function showResults(url){
         
         return Fetcher.get(url)
-        .then(({results:genreResults, next} ) => {
+        .then((genreResults, next ) => {
             createCard(genreResults)
             return next;
         })
