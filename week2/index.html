@@ -14,33 +14,27 @@
 
 <body>
 
-
-  <!-- <div class="main__container">
     <div id="gameGenres__container">
-      <div class="gameGenres__card">
-        <img src="" alt="" width="260" height="260">
-        <div>
-          <h1 class="genreName"></h1>
-          <p class="totalGames"></p>
-        </div>
-      </div>
+      
     </div>
 
     <div id="gameOverview__container"></div>
     
     <div id="gameDetails__container"></div>
-  </div> -->
-    
-  <footer>
-    <h2 data-bind="name">DevTools</h2>
-    <p data-bind="text">... are a Developer's best friend ❤️</p>
-  </footer>
-
     <!-- <button id="loadMore"></button> -->
 
-    <script type="module" src="./public/modules/lib/transparency.min.js"></script>
-    <!-- <script type="module" src="./public/modules/insertData.js"></script> -->
+    <script id="genreTemplate" type="text/x-handlebars-template">
+      {{#each data}}
+        <h2>{{name}}</h2>
+      {{/each}}
+    </script>
+
+
+    <script src="./public/modules/lib/handlebars-v4.7.3.js"></script>
     <script type="module" src="./public/js/main.js"></script>
+
+    <!-- <script type="module" src="./public/modules/insertData.js"></script> -->
     <!-- <script type="module" src="./public/modules/lib/routie.js"></script> -->
+
 </body>
 </html>

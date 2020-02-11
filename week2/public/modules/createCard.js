@@ -1,14 +1,11 @@
 export default function insertGames(data) {
     
-    let card = document.querySelector('.gameGenres__card'),
-        image = card.querySelector('img'),
-        genreName = card.querySelector('.genreName'),
-        totalGames = card.querySelector('.totalGames');
+    var rawTemplate = document.getElementById("genreTemplate").innerHTML;
+    var compiledTemplate = Handlebars.compile(rawTemplate);
+    var ourGeneratedHTML = compiledTemplate(data.name);
 
-    image.src = data.image_background;
-    genreName.textContent = data.name;
-    totalGames.textContent = data.games_count;
-
-    return card;
+    var genreContainer = document.getElementById('gameGenres__container');
+    genreContainer.innerHTML = ourGeneratedHTML;
+    console.log("help", data.name)
 
 }

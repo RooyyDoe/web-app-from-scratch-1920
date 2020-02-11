@@ -1,14 +1,7 @@
-const footer = document.querySelector('footer');
-const data = {
-  title: 'Developer Tools',
-  text: '... are totally wicked 🦄'
-};
-
-setTimeout(renderTemplate(footer, data), 1000);
-
-// Transparency
-function renderTemplate(element, data) {
-  return () => {
-    Transparency.render(element, data);
-  };
-}
+var activities = [
+  {activity: 'Jogging'},
+  {activity: 'Gym'},
+  {activity: 'Sky Diving'},
+];
+// or
+Transparency.render(document.getElementById('activities'), activities);

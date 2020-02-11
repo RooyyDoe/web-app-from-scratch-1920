@@ -1,12 +1,10 @@
 import { Fetcher } from '../modules/fetcher.js';
 import createCard from '../modules/createCard.js';
-import ejs from '../modules/lib/ejs.js'
 
 // Set scope
 {
     // Set variables
-    const container = document.getElementById('gameGenres__container'),
-            baseUrl = "https://api.rawg.io/api/",
+    const   baseUrl = "https://api.rawg.io/api/",
             key = "genres",
             url = `${baseUrl}${key}`;
 
@@ -18,9 +16,7 @@ import ejs from '../modules/lib/ejs.js'
         
         return Fetcher.get(url)
         .then(({results:genreResults, next} ) => {
-            genreResults.forEach(data => {  
-                container.appendChild(createCard(data))
-            })
+            createCard(genreResults)
             return next;
         })
         .then((next) => {
@@ -45,9 +41,10 @@ import ejs from '../modules/lib/ejs.js'
                 })
 
                 main__container.appendChild(button)
-            } else {
-                document.getElementById("loadMore").remove();
-            }
+            } 
+            // else {
+            //     document.getElementById("loadMore").remove();
+            // }
         })
     }
             
