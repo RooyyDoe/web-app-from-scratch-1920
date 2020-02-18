@@ -25,12 +25,32 @@
 
     <script id="genreTemplate" type="text/x-handlebars-template">
       {{#each results}}
+      <a href="#{{name}}">
+        <div class="card">
+          <img src="{{image_background}}" alt="{{name}}">
+          <div class="card__content">
+            <h1>{{name}}</h1>
+            <p>Total games: <span>{{games_count}}</span></p>
+          </div>
+        </div>  
+      </a>
+      {{/each}}
+    </script>
+
+    <script id="gameTemplate" type="text/x-handlebars-template">
+      {{#each results}}
+        <h2>{{name}}</h2>
+      {{/each}}
+    </script>
+
+    <script id="detailTemplate" type="text/x-handlebars-template">
+      {{#each results}}
         <h2>{{name}}</h2>
       {{/each}}
     </script>
 
 
-    <script src="./public/modules/lib/handlebars-v4.7.3.js"></script>
+    <script src="./public/js/modules/lib/handlebars-v4.7.3.js"></script>
     <script type="module" src="./public/js/main.js"></script>
     
 

@@ -1,7 +1,6 @@
-import { Fetcher } from '../modules/fetcher.js';
-import createCard from '../modules/createCard.js';
+import { Fetcher } from './modules/fetcher.js';
+import { renderGenre } from './modules/render.js';
 
-// Set scope
 {
     // Set variables
     const   baseUrl = "https://api.rawg.io/api/",
@@ -16,7 +15,7 @@ import createCard from '../modules/createCard.js';
         
         return Fetcher.get(url)
         .then((genreResults, next ) => {
-            createCard(genreResults)
+            renderGenre(genreResults)
             return next;
         })
         .then((next) => {
@@ -50,5 +49,3 @@ import createCard from '../modules/createCard.js';
             
 
 }
-
-
