@@ -23,6 +23,8 @@ This is a list of things I want to do in this course:
 
 ### Week One
 
+Live link: [Demo](https://rooyydoe.github.io/web-app-from-scratch-1920/week1/)
+
 - [X] Brainstorm session to figure out my concept.
 - [X] Deciding what API I am going to use.
 - [X] Request data from the API with an asynchronous call.
@@ -37,9 +39,11 @@ This is a list of things I want to do in this course:
 
 - [X] Expanding my `README.md` with extra information
 - [X] Make an Actor diagram.
-- [ ] Make an interaction diagram.
+- [X] Make an interaction diagram.
 - [ ] Use routing for the detail pages.
-- [ ] Use a templating engine.
+- [X] Use a templating engine.
+- [ ] Remake Actor/Interaction diagram.
+- [ ] Deciding what module structure I am going to use 
 
 ### Week Three
 
@@ -103,6 +107,26 @@ There are also standard Utils in the application that will be available on every
  <summary>First version</summary>
  
  ![InteractionDiagram](https://user-images.githubusercontent.com/40355914/74184653-70f95980-4c47-11ea-8b5c-30951f68fae1.png)
+ 
+</details>
+
+<details>
+ <summary>Second version</summary>
+ 
+ ### **`Router.genres()`**
+ 
+ 
+ ![011a26c5f1de65a07369a66c78e19683](https://user-images.githubusercontent.com/40355914/74739396-081e6c80-5259-11ea-9ce7-f85a8ae99f6c.png)
+ 
+ ### **`Router.gameDetails()`**
+ 
+ 
+ ![2810bb3c610093f7cd637c9278e9ac6f](https://user-images.githubusercontent.com/40355914/74739502-3ef48280-5259-11ea-877e-ef2738747582.png)
+ 
+ ### **`Router.games()`**
+ 
+  
+  ![d53e82cf77e33e6d1d34783e4f6a8f87](https://user-images.githubusercontent.com/40355914/74739534-50d62580-5259-11ea-8d85-1a2b33e2042e.png)
  
 </details>
 
