@@ -69,11 +69,34 @@ Run the index.html into your browser
 
 ### Actor diagram
 
-<img width="934" alt="Schermafdruk 2020-02-10 17 37 53" src="https://user-images.githubusercontent.com/40355914/74169770-28807280-4c2c-11ea-8795-d72f0aa6b447.png">
+<details>
+ <summary>First version</summary>
+ <img width="934" alt="Schermafdruk 2020-02-10 17 37 53" src="https://user-images.githubusercontent.com/40355914/74169770-28807280-4c2c-11ea-8795-d72f0aa6b447.png">
+</details>
+
+<details> 
+ <summary>Second version</summary>
+ 
+ **Explained**
+ It starts with opening the application, after this the user is going to route to one of the routing options. At first this will probably be the *Genre Overview Page*. When the user routes to `genre()` it runs the function `getGenres()` and it will look into the local storage if there is any available data that can be re-used. If not there will be a API request to the *RAWG API Database* and get the data asked for in return. This will also be saved in the `localStorage`. When this process is done it will send it back to the router that renders in the genre page.
+ 
+**getGames Utils**
+When the users are located on the *games page* they are able to filter and sort the games on how they like. When this happens the data will be manipulated with (Map, Filter or Reduce) and will return to the routes that renders in the new results to the *games page*. 
+
+**Utils**
+There are also standard Utils in the application that will be available on every page. this will be a `loadingState` and `Error Handling`. LoadingState will be used when the user is requesting a lot of data. The Error handling will be used when the user routes to a wrong `href` or the data is not available.
+ 
+![7785f46af6744ec592ac6083a958f5f0](https://user-images.githubusercontent.com/40355914/74734687-5890cc80-524f-11ea-8b0a-aee6fa59e54f.png)
+</details>
+
+
 
 ### Interaction diagram
+<details>
+ <summary>First version</summary>
+ ![InteractionDiagram](https://user-images.githubusercontent.com/40355914/74184653-70f95980-4c47-11ea-8b5c-30951f68fae1.png)
+</details>
 
-![InteractionDiagram](https://user-images.githubusercontent.com/40355914/74184653-70f95980-4c47-11ea-8b5c-30951f68fae1.png)
 
 ## API
 
