@@ -8,44 +8,83 @@
   <meta name="description" content="Wafs">
   <meta name="author" content="Rooyyke">
 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./public/css/stylesheet.css">
   
 </head>
 
 <body>
 
+    <div class="header" id="myHeader">
+      <h2>Rawg API</h2>
+    </div>
+
+  <div class="mainWrapper">
     <div id="gameGenres__container">
       
     </div>
 
-    <div id="gameOverview__container"></div>
+    <div id="gameOverview__container">
+
+    </div>
     
-    <div id="gameDetails__container"></div>
+    <div id="gameDetails__container">
+
+    </div>
+  </div>
     <!-- <button id="loadMore"></button> -->
 
     <script id="genreTemplate" type="text/x-handlebars-template">
       {{#each results}}
-      <a href="#{{name}}">
+      <div class="card__wrapper">
+        <div class="card" style="background-image: linear-gradient(rgba(32, 32, 32, 0.5), rgb(32, 32, 32) 70%), url({{image_background}}) ;" >
+          <div class="card__content">
+            <a href="#{{slug}}"><h1>{{name}}</h1></a>
+            <div class="content__total-games">
+              <p>Total games: </p>
+              <p>{{games_count}}</p>
+            </div>
+            {{#each games}}
+            <div class="content__populair-games">
+              <a class="game-name" href="#/{{slug}}">{{name}}</a>
+              <div class="games__added">
+                <p>{{added}} </p>
+                <i class="material-icons">person_add</i>
+              </div>
+            </div>
+            {{/each}}
+          </div>
+        </div>  
+      </div>
+      {{/each}}
+    </script>
+
+    <script id="gamesTemplate" type="text/x-handlebars-template">
+      {{#each results}}
+      <a href="#/{{slug}}">
         <div class="card">
           <img src="{{image_background}}" alt="{{name}}">
           <div class="card__content">
             <h1>{{name}}</h1>
-            <p>Total games: <span>{{games_count}}</span></p>
           </div>
         </div>  
       </a>
       {{/each}}
     </script>
 
-    <script id="gameTemplate" type="text/x-handlebars-template">
-      {{#each results}}
-        <h2>{{name}}</h2>
-      {{/each}}
-    </script>
-
     <script id="detailTemplate" type="text/x-handlebars-template">
       {{#each results}}
-        <h2>{{name}}</h2>
+      <a href="#{{name}}">
+        <div class="card">
+          <img src="{{image_background}}" alt="{{name}}">
+          <div class="card__content">
+            <h1>{{name}}</h1>
+          </div>
+        </div>  
+      </a>
       {{/each}}
     </script>
 

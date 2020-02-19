@@ -1,62 +1,125 @@
 body {
     background-color: #141414;
     font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
     width: 100vw;
-    height: 100vh;
     margin: 0 auto;
 }
 
-#gameGenres__container {
+p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header {
+    margin: 0;
+    padding: 2em 0em;
+    width: 100%;
+    font-size: 1.3em;
+    color: white;
+    background-color: rgb(35, 56, 74, 0.7);
+    top: 0;
+    position: sticky;
+}
+
+.header > h2 {
+    margin: 0;
+    padding-left: 3em;
+}
+
+.mainWrapper {
+    width: 100vw;
+    margin: 0 auto; 
+}
+
+#gameGenres__container,
+#gameOverview__container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-a {
-    width: 30%;
-    margin: 1em;
-    text-decoration: none;
-    cursor: pointer;
+.card__wrapper {
+    width: 100%;
+    margin: 2em;
 }
 
 .card {
-    height: 380px;
+    height: 370px;
     text-align: center;
     border-radius: 1em;
     color: white;
-    background: #1F1F1F;
-    overflow: hidden;
+    background-color: rgb(32, 32, 32);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
     transition: all .5s linear;
 }
 
-.card > img {
-    object-fit: cover;
-    width: 100%;
-    height: 250px;
-    border-bottom: 2px solid gold;
-}
-
-.card__content {
-    padding: .5em;
-}
-
-.card__content > h1 {
+.card__content > a > h1 {
     font-size: 2em;
-    padding-bottom: .5em;
-    margin: 0;
-}
-
-.card__content > p {
-    margin: .7em 0em 0em 0em;
-}
-
-.card__content > p > span {
-    font-size: 1.2em;
+    max-width: 80%;
     text-align: center;
-    border: 1px solid white;
-    border-radius: 1em;
-    padding: 0.4em;
-    margin: 0em 0em 0em 1em;
+    color: white;
+    border-bottom: 1px solid white;
+    padding: 1em 1em .2em 1em;
+    margin: 0 auto;
+    margin-bottom: 1.5em;
+}
+
+.content__total-games {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(253, 253, 253, 0.3);
+    margin: 1em 1.5em 1.5em 1.5em;
+}
+
+.content__total-games > p:nth-of-type(1) {
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.content__total-games > p:nth-of-type(2) {
+    font-size: 1.3em;
+    font-weight: bold;
+    opacity: 0.5;
+}
+
+
+.content__populair-games {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    margin: .4em 1em 0em 2em;
+}
+
+.game-name {
+    font-size: 1em;
+    color: white;
+}
+
+.game-name:hover {
+    font-weight: bold;
+}
+
+.content__populair-games > p {
+    font-size: 1em;
+    font-weight: bold;
+    opacity: 0.5;
+}
+
+.games__added {
+    display: flex;
+    align-items: center;
+}
+
+.games__added > p {
+    padding-right: .3em;
 }
 
 #loadMore {
@@ -68,3 +131,27 @@ a {
     overflow: hidden;
     cursor: pointer;
 }
+
+
+
+
+ /* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    .card__wrapper {
+        width: 40%;
+    }
+ }
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+    .card__wrapper {
+        width: 40-%;
+    }
+ }
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+    .card__wrapper {
+        width: 22%;
+    }
+ }
