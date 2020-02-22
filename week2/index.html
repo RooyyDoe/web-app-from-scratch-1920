@@ -24,11 +24,11 @@
 
   <div class="mainWrapper">
     <div id="gameGenres__container">
-      
+
     </div>
 
     <div id="gameOverview__container">
-
+      
     </div>
     
     <div id="gameDetails__container">
@@ -63,29 +63,128 @@
     </script>
 
     <script id="gamesTemplate" type="text/x-handlebars-template">
+      <div class="back">
+        <a href="./"><i class="material-icons">
+          keyboard_backspace
+          </i></a>
+      </div>
       {{#each results}}
-      <a href="#/{{slug}}">
-        <div class="card">
-          <img src="{{image_background}}" alt="{{name}}">
-          <div class="card__content">
-            <h1>{{name}}</h1>
+      <div class="card__wrapper">
+        <div class="game__card" style="background-image: linear-gradient(rgba(32, 32, 32, 0.5), rgb(32, 32, 32) 70%), url({{background_image}}) ;" >
+          
+          <div class="game__likes">
+            <img src="./public/images/heart.png">
+            <p>{{suggestions_count}}</p>
+          </div>
+          
+          <div class="game__card__title">
+            <a href="#/{{slug}}"><h1>{{name}}</h1></a>
+          </div>
+
+          <div class="release__date">
+            <p>Release Date:</p>
+            <p>{{released}}</p>
+          </div>
+          
+          <div class="game__platform">
+            <p>Gaming Platform:</p>
+            <div class="game__platform__name">
+            {{#each genres}}
+              <a href="#{{slug}}">{{name}}</a>
+            {{/each}}
+            </div>
+          </div>
+
+          <div class="game__rating">
+            <p>Game Rating:</p>
+            <p>{{rating}} / 5.0</p>
+          </div>
+            
           </div>
         </div>  
-      </a>
+      </div>
       {{/each}}
     </script>
 
     <script id="detailTemplate" type="text/x-handlebars-template">
-      {{#each results}}
-      <a href="#{{name}}">
-        <div class="card">
-          <img src="{{image_background}}" alt="{{name}}">
-          <div class="card__content">
-            <h1>{{name}}</h1>
-          </div>
-        </div>  
-      </a>
-      {{/each}}
+      {{#with this}}
+      <div class="detail__back">
+        <a href="./"><i class="material-icons">
+          keyboard_backspace
+          </i></a>
+      </div>
+        <div class="detail__wrapper">
+          <div class="background" style="background-image: linear-gradient(rgba(32, 32, 32, 0.5), rgb(32, 32, 32) 70%), url({{background_image}}) ;">
+            <div class="detail__content">
+              <div class="breadcrumb__detail">
+                <p><a href="./">Genres</a> / <span>Games</span> / <a href="{{website}}">{{name}}</a></p>
+              </div>
+              <h1>{{name_original}}</h1>
+              <div class="detail__release__date">
+                <p>Release Date:</p>
+                <p>{{released}}</p>
+              </div>
+              <div class="About">
+                <h2>About</h2>
+                {{{description}}}
+              </div>
+              <div class="detail__info__wrapper">
+                <div class="game__info">
+                  <div class="info__wrapper">
+                    <div class="detail__game__info">
+                      <p>Platforms</p>
+                      <div class="name"> 
+                      {{#each platforms}}
+                        <p>{{platform.name}}</p>
+                      {{/each}}
+                      </div>
+                    </div>
+                    <div class="detail__game__info">
+                      <p>genres</p>
+                      <div class="name"> 
+                      {{#each genres}}
+                        <p>{{name}}</p>
+                      {{/each}}
+                      </div>
+                    </div>
+                    <div class="detail__game__info">
+                      <p>Developers</p>
+                      <div class="name"> 
+                      {{#each developers}}
+                        <p>{{name}}</p>
+                      {{/each}}
+                      </div>
+                    </div>
+                    <div class="detail__game__info">
+                      <p>Publishers</p>
+                      <div class="name"> 
+                      {{#each publishers}}
+                        <p>{{name}}</p>
+                      {{/each}}
+                      </div>
+                    </div>
+                    <div class="detail__game__info">
+                      <p>Stores</p>
+                      <div class="name"> 
+                      {{#each stores}}
+                        <a href="{{url}}"><p>{{store.name}}</p></a>
+                      {{/each}}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="game__video">
+                  <video width="1000" controls>
+                    <source src="{{clip.clip}}" type="video/mp4">
+                    Your browser does not support HTML5 video.
+                  </video>  
+                </div>
+              </div>
+              
+            </div>
+          </div> 
+        </div>
+      {{/with}}
     </script>
 
 
