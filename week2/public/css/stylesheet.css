@@ -312,7 +312,7 @@ a {
 .game__info {
     display: flex;
     flex-wrap: wrap;
-    width: 50%;
+    width: 100%;
     margin-top: 2em;
 }
 
@@ -359,7 +359,7 @@ a {
 /* Video */
 
 .game__video {
-    width: 50%;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -443,13 +443,13 @@ a {
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
     .card__wrapper {
-        width: 40-%;
+        width: 40%;
     }
  }
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) { 
     .card__wrapper {
-        width: 22%;
+        width: 28%;
     }
  }
