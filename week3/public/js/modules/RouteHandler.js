@@ -13,20 +13,25 @@ import {
     renderGameDetails
 } from './render.js'
 
+// Will handle everything that happens in the genre routing
 export async function genreOverview() {
     try {
+        // Shows loading state when data is not ready yet.
         showLoadingAnimation()
+        // Puts data out of the API call in a variable
         const genreData = getGenres()
-
+        // Gives through the data to renderGenre() but only when it's ready
         renderGenre(await genreData)
     } catch (err) {
         console.log(err)
     } finally {
+        // Removes loading state when the data is loaded in.
         removeLoadingAnimation()
         console.log("Done?")
     }
 }
 
+// Will handle everything that happens in the game routing
 export async function gamesOverview(genre) {
     try {
         showLoadingAnimation()
@@ -40,10 +45,11 @@ export async function gamesOverview(genre) {
     }
 }
 
+// Will handle everything that happens in the gameDetail routing
 export async function gameDetails(name) {
     try {
         const gameDetailsData = getGameDetails(name)
-        console.log("help", await gameDetailsData)
+        // console.log("help", await gameDetailsData)
         renderGameDetails(await gameDetailsData)
     } catch (err) {
         console.log(err)
