@@ -8,10 +8,6 @@ import {
     renderGames
 } from './render.js'
 
-// const url = 'https://api.rawg.io/api/games?genres='
-// const pageSize = '& _size=40'
-
-// Function to show the results
 export function getGenres() {
     return Fetcher.get(`https://api.rawg.io/api/genres`)
 }
@@ -46,8 +42,6 @@ export function getGames(genre) {
                 document.getElementById('previous').style.display = 'inline-block';
             }
 
-
-
             previousButton.addEventListener('click', () => {
                 Fetcher.get(previousPage)
                     .then((data) => cleanTagsData(data))
@@ -64,10 +58,6 @@ export function getGames(genre) {
                     })
 
             })
-
-
-
-
 
             nextButton.addEventListener('click', () => {
                 Fetcher.get(nextPage)

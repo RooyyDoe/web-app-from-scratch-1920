@@ -19,29 +19,6 @@ export function renderGames(gamesData) {
     const children = main.children;
     main.removeChild(children[0])
 
-    // console.log(gamesData)
-
-    // addEventListener
-    // console.log(sortAlphabetical(gamesData.results))
-    // let x = gamesData.results.sort(function(a, b) {
-    //     return a.name.localeCompare(b.name.toLowerCase());
-    //  });
-
-    //  console.log(x)
-
-
-    //  let v = gamesData.results.sort((highest, lowest) => highest.rating - lowest.rating)
-
-    //  console.log(v)
-
-    // [gamesData].sort((highest, lowest) => { if (highest.name < lowest.name) return -1 })
-
-    // gamesData.results.map(object => {
-    //     console.log(object)
-
-    //     data.sort((a, b) => { if (a.name < b.name) return -1 })
-    // })
-
     const gamesTemplate = document.getElementById("gamesTemplate").textContent;
     const compiledTemplate = Handlebars.compile(gamesTemplate, gamesData);
     const gamesGeneratedHTML = compiledTemplate(gamesData);
