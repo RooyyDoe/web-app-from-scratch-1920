@@ -16,10 +16,12 @@ The whole process of Web App From Scratch will be documented here!
 * [Description](#description-)
 * [Usage](#usage)
   * [Packages and Technologies](#packages-and-technologies)
-* [API](#api-)
 * [How It Works](#how-it-works)
   * [Actor Diagram](#actor-diagram)
   * [Interaction Diagram](#interaction-diagram)
+* [Handlebars.js](#handlebars.js)
+* [Stuff I want to do](#stuff-I-want-to-do)
+* [API](#api)
 * [Sources](#sources)
 * [Credits](#credits)
 * [Licence](#licence)
@@ -44,17 +46,28 @@ Live link: [Demo](https://rooyydoe.github.io/web-app-from-scratch-1920/week1/)
 
 ### Week Two
 
+Live link: [Demo](https://rooyydoe.github.io/web-app-from-scratch-1920/week2/)
+
 - [X] Expanding my `README.md` with extra information
 - [X] Make an Actor diagram.
 - [X] Make an interaction diagram.
 - [ ] Use routing for the detail pages.
 - [X] Use a templating engine.
-- [ ] Remake Actor/Interaction diagram.
-- [ ] Deciding what module structure I am going to use 
+- [X] Remake Actor/Interaction diagram.
+- [X] Deciding what module structure I am going to use 
 
 ### Week Three
 
-- [X] **Loading..**
+Live link: [Demo](https://rooyydoe.github.io/web-app-from-scratch-1920/week3/)
+
+- [X] Use routing for the detail pages.
+- [X] Made an design for my application.
+- [X] Added `.map` and `.filter`.
+- [X] Made a sorting function for my game data.
+- [X] fixed pagination on the Game Page.
+- [X] Made a Detail Page template.
+- [X] Cleaned up my code.
+- [X] Added code comments for better readability.
 
 ## Description
 
@@ -137,6 +150,23 @@ There are also standard Utils in the application that will be available on every
  
 </details>
 
+## Handlebars.js
+
+For this project I've used handlebars as template engine. I had used a template engine once before in a project but this was running on `nodeJS`. This was way different then what I needed to do right now. I have to say it is still a easy way to generate HTML. I like how easy you can do a `forEach` in a template and it will just show all the results in the object/array.
+
+I do think it looks a bit messy if you use `handlebars.js` **client-side**. I think this also can be code better than I am doing right now. But I am making a `<script>` tag in the HTML and write the whole template inside this. I am adding a `id` to it and requests this with a `doc.getElementByID`. And I am compiling the HTML into a handlebars template and then I am putting it into another element to show it on the interface of the user.
+
+## Stuff I want to do
+- [X] Making a router for my application.
+- [X] Getting async data from an API.
+- [X] Generate my HTML with an template engine.
+- [X] Making pagination for the retrieved data.
+- [X] Use routing for the detail pages.
+- [X] Made a sort function in my application.
+- [ ] Made a search filter in my application.
+- [ ] Upgraded my templating in a cleaner way.
+- [ ] Do mor with the data from the API
+- [ ] Made a 'games like' subject on the detail page.
 
 ## API
 
@@ -292,6 +322,9 @@ This will be returning the following data of the game:
 ## Credits
 
 * [Help from Thijs Spijker](https://github.com/iSirThijs)
+* [Help from Wessel smit](https://github.com/WesselSmit)
+* [Help from Sjors evenleens](https://github.com/Choerd)
+* [Help from Menno](https://github.com/Mennauu)
 
 # License
 
