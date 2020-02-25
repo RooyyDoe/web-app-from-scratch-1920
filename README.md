@@ -2,7 +2,14 @@
 
 The whole process of Web App From Scratch will be documented here!
 
+### Overview Page
 ![118c792e502228a6cf7a3923881abbb3](https://user-images.githubusercontent.com/40355914/74872628-e0fd9300-535d-11ea-9334-df6c28d509cf.png)
+
+### Games Page
+![9a99fbde88853c36264e00cbd14c89ea](https://user-images.githubusercontent.com/40355914/75287067-008f3280-581a-11ea-8e96-543f3991be0c.jpg)
+
+### Detail Page
+![af7e3aba6921728a89a04e470ceeb9c2](https://user-images.githubusercontent.com/40355914/75287088-0c7af480-581a-11ea-9595-bda2d54a7924.png)
 
 ## Table of contents
 * [To Do](#to-do-)
