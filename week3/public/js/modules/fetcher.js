@@ -13,8 +13,10 @@ const parseJSON = res => res.json();
 const Fetcher = {
     get: (path) =>
         fetch(path)
-         .then(checkStatus)
-         .then(parseJSON)
+        .then(checkStatus)
+        .then(parseJSON)
 };
 
-export { Fetcher };
+export {
+    Fetcher
+};

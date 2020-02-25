@@ -1,7 +1,9 @@
-import { sortAlphabetical } from './utils.js'
+import {
+    sortAlphabetical
+} from './utils.js'
 
 export function renderGenre(genreData) {
-    
+
     const genreTemplate = document.getElementById("genreTemplate").textContent;
     const compiledTemplate = Handlebars.compile(genreTemplate, genreData);
     const genreGeneratedHTML = compiledTemplate(genreData);
@@ -17,7 +19,7 @@ export function renderGames(gamesData) {
     const children = main.children;
     main.removeChild(children[0])
 
-    console.log(gamesData)
+    // console.log(gamesData)
 
     // addEventListener
     // console.log(sortAlphabetical(gamesData.results))

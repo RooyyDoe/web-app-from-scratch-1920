@@ -1,65 +1,98 @@
-import { Fetcher } from './fetcher.js';
-
+import {
+    Fetcher
+} from './fetcher.js'
+import {
+    cleanTagsData
+} from './utils.js'
+import {
+    renderGames
+} from './render.js'
 
 // const url = 'https://api.rawg.io/api/games?genres='
 // const pageSize = '& _size=40'
 
 // Function to show the results
-export function getGenres(){
+export function getGenres() {
     return Fetcher.get(`https://api.rawg.io/api/genres`)
 }
+
+
 export function getGames(genre) {
     return Fetcher.get(`https://api.rawg.io/api/games?genres=${genre}&page_size=40`)
+        .then((data) => cleanTagsData(data))
         .then((data) => {
-            let dataObj = data
+            console.log(data)
+            let nextPage = data.next;
+            let previousPage = data.previous;
 
-            dataObj.results.map(item => {
-                let newTagArray = item.tags.map(tag => {
-                    return tag = {
-                        name: tag.name,
-                        language: tag.language
-                    }
-                })
-                let filteredArray = newTagArray.filter(tag => tag.language === 'eng')
-                item.tags = filteredArray;
-                return item;
+            const previousButton = document.createElement('button')
+            previousButton.setAttribute('id', 'previous')
+            previousButton.setAttribute('value', previousPage)
+            previousButton.innerText = "Previous"
+
+            main.appendChild(previousButton)
+
+            const nextButton = document.createElement('button')
+            nextButton.setAttribute('id', 'next')
+            nextButton.setAttribute('value', nextPage)
+            nextButton.innerText = "Next"
+
+            main.appendChild(nextButton)
+
+
+            if (previousPage === null) {
+                document.getElementById('previous').style.display = 'none';
+            } else {
+                document.getElementById('previous').style.display = 'inline-block';
+            }
+
+
+
+            previousButton.addEventListener('click', () => {
+                Fetcher.get(previousPage)
+                    .then((data) => cleanTagsData(data))
+                    .then((data) => {
+                        console.log(data)
+                        nextPage = data.next
+                        previousPage = data.previous
+                        if (previousPage === null) {
+                            document.getElementById('previous').style.display = 'none';
+                        } else {
+                            document.getElementById('previous').style.display = 'inline-block';
+                        }
+                        renderGames(data)
+                    })
+
             })
-            return dataObj
+
+
+
+
+
+            nextButton.addEventListener('click', () => {
+                Fetcher.get(nextPage)
+                    .then((data) => cleanTagsData(data))
+                    .then((data) => {
+                        nextPage = data.next
+                        previousPage = data.previous
+                        console.log(data)
+                        if (previousPage === null) {
+                            document.getElementById('previous').style.display = 'none';
+                        } else {
+                            document.getElementById('previous').style.display = 'inline-block';
+                        }
+                        renderGames(data)
+                    })
+            })
+
+            // }
+            return data;
         })
-    .then((data) => {
-        const nextPage = data.next;
 
-        console.log(nextPage)
+}
 
-        const button = document.getElementById("loadMore")
-        if(button && nextPage) {
-            // button exists
-            // button needs to be updated
 
-            button.setAttribute('value', nextPage)
-            console.log(nextPage)
-        } else if (nextPage){
-            // button does not exists
-            // button needs to be made
-
-            const button = document.createElement('button')
-            button.setAttribute('id', 'loadMore')
-            button.setAttribute('value', nextPage)
-            button.innerText = "loadMore"
-
-            button.addEventListener('click', () => {
-                getGames()
-            })
-
-            main.appendChild(button)
-        } else {
-            document.getElementById("loadMore").remove();
-        }
-        return data;
-    })
-
-}   
 // Function to show the results
-export function getGameDetails(name){
+export function getGameDetails(name) {
     return Fetcher.get(`https://api.rawg.io/api/games/${name}`)
 }

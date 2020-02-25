@@ -27,17 +27,17 @@ a {
     position: sticky;
 }
 
-.header > h2 {
+.header>h2 {
     margin: 0;
     padding-left: 3em;
 }
 
 .mainWrapper {
     width: 100vw;
-    margin: 0 auto; 
+    margin: 0 auto;
 }
 
-.wrap{
+.wrap {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -62,7 +62,7 @@ a {
     transition: all .5s linear;
 }
 
-.card__content > a > h1 {
+.card__content>a>h1 {
     font-size: 2em;
     max-width: 80%;
     text-align: center;
@@ -81,12 +81,12 @@ a {
     margin: 1em 1.5em 1.5em 1.5em;
 }
 
-.content__total-games > p:nth-of-type(1) {
+.content__total-games>p:nth-of-type(1) {
     font-size: 1.3em;
     font-weight: bold;
 }
 
-.content__total-games > p:nth-of-type(2) {
+.content__total-games>p:nth-of-type(2) {
     font-size: 1.3em;
     font-weight: bold;
     opacity: 0.5;
@@ -110,7 +110,7 @@ a {
     font-weight: bold;
 }
 
-.content__populair-games > p {
+.content__populair-games>p {
     font-size: 1em;
     font-weight: bold;
     opacity: 0.5;
@@ -121,7 +121,7 @@ a {
     align-items: center;
 }
 
-.games__added > p {
+.games__added>p {
     padding-right: .3em;
     font-weight: bold;
     opacity: 0.8;
@@ -142,7 +142,7 @@ a {
     margin-bottom: 1em;
 }
 
-.game__card__title > a > h1 { 
+.game__card__title>a>h1 {
     font-size: 2em;
     height: 70px;
     text-align: center;
@@ -159,12 +159,12 @@ a {
     margin: 0;
 }
 
-.game__likes > img {
+.game__likes>img {
     width: 55px;
     height: 55px;
 }
 
-.game__likes > p {
+.game__likes>p {
     margin-left: -2.6em;
     margin-top: 1em;
     text-align: center;
@@ -181,12 +181,12 @@ a {
     border-bottom: 1px solid rgb(255, 255, 255, 0.5);
 }
 
-.release__date > p:nth-of-type(1) {
+.release__date>p:nth-of-type(1) {
     font-weight: bold;
     font-size: .9em;
 }
 
-.release__date > p:nth-of-type(2) {
+.release__date>p:nth-of-type(2) {
     font-weight: bold;
     font-size: .9em;
     opacity: .6;
@@ -203,7 +203,7 @@ a {
     border-bottom: 1px solid rgb(255, 255, 255, 0.5);
 }
 
-.game__platform > p:nth-of-type(1) {
+.game__platform>p:nth-of-type(1) {
     font-weight: bold;
     font-size: .9em;
     opacity: 1;
@@ -213,7 +213,7 @@ a {
     display: flex;
 }
 
-.game__platform__name > a {
+.game__platform__name>a {
     font-size: .8em;
     font-weight: bold;
     opacity: .6;
@@ -221,7 +221,7 @@ a {
     padding-left: .4em;
 }
 
-.game__platform__name > a:hover {
+.game__platform__name>a:hover {
     opacity: 1;
 }
 
@@ -236,25 +236,15 @@ a {
     border-bottom: 1px solid rgb(255, 255, 255, 0.5);
 }
 
-.game__rating > p:nth-of-type(1) {
+.game__rating>p:nth-of-type(1) {
     font-weight: bold;
     font-size: .9em;
 }
 
-.game__rating > p:nth-of-type(2) {
+.game__rating>p:nth-of-type(2) {
     font-weight: bold;
     font-size: .9em;
     opacity: .6;
-}
-
-#loadMore {
-    text-align: center;
-    margin: 1em;
-    padding: 1em;
-    background: white;
-    border-radius: 12px;
-    overflow: hidden;
-    cursor: pointer;
 }
 
 /* detail page */
@@ -277,7 +267,7 @@ a {
     width: 85%;
 }
 
-.detail__content > h1 {
+.detail__content>h1 {
     font-size: 7.5em;
     margin-top: .4em;
     letter-spacing: .1em;
@@ -290,13 +280,13 @@ a {
     padding-left: .6em;
 }
 
-.detail__release__date > p:nth-of-type(1) {
+.detail__release__date>p:nth-of-type(1) {
     padding-right: 1em;
     font-weight: bold;
     font-size: .9em;
 }
 
-.detail__release__date > p:nth-of-type(2) {
+.detail__release__date>p:nth-of-type(2) {
     font-weight: bold;
     font-size: .9em;
     opacity: .6;
@@ -331,11 +321,11 @@ a {
     width: 100%;
 }
 
-.detail__game__info > p {
+.detail__game__info>p {
     padding-bottom: .5em;
 }
 
-.name > p {
+.name>p {
     padding: .5em 1em;
     margin-right: 1em;
     margin-bottom: 1em;
@@ -345,7 +335,7 @@ a {
     border-radius: 1em;
 }
 
-.name > a > p {
+.name>a>p {
     padding: .5em 1em;
     margin-right: 1em;
     margin-bottom: 1em;
@@ -353,7 +343,7 @@ a {
     border: 1px solid white;
     text-align: center;
     border-radius: 1em;
-} 
+}
 
 /* Video */
 
@@ -362,37 +352,37 @@ a {
     margin: 0 auto;
 }
 
-.game__video > video {
+.game__video>video {
     border: 1px solid white;
 }
 
 /* breadcrumbs */
 
-.breadcrumb__detail > p {
+.breadcrumb__detail>p {
     font-size: 1em;
     margin: 0;
     color: white;
 }
 
-.breadcrumb__detail > p > span {
+.breadcrumb__detail>p>span {
     padding: 0em .3em 0em .3em;
     opacity: .2;
 }
 
-.breadcrumb__detail > p > a {
+.breadcrumb__detail>p>a {
     opacity: .7;
 }
 
-.breadcrumb__detail > p > a:nth-of-type(1) {
+.breadcrumb__detail>p>a:nth-of-type(1) {
     padding-right: .3em;
     padding-left: .6em;
 }
 
-.breadcrumb__detail > p > a:nth-of-type(2) {
+.breadcrumb__detail>p>a:nth-of-type(2) {
     padding-left: .3em;
 }
 
-.breadcrumb__detail > p > a:hover {
+.breadcrumb__detail>p>a:hover {
     opacity: 1;
 }
 
@@ -402,11 +392,12 @@ a {
     display: flex;
     justify-content: center;
 }
-.back > a {
+
+.back>a {
     color: white;
 }
 
-.back > a > .material-icons {
+.back>a>.material-icons {
     position: fixed;
     z-index: 502;
     top: 2%;
@@ -418,11 +409,12 @@ a {
     display: flex;
     justify-content: center;
 }
-.detail__back > a {
+
+.detail__back>a {
     color: white;
 }
 
-.detail__back > a > .material-icons {
+.detail__back>a>.material-icons {
     position: absolute;
     z-index: 101;
     top: 2%;
@@ -454,11 +446,11 @@ a {
     background-color: rgb(32, 32, 32);
 }
 
-.loading_content > img {
+.loading_content>img {
     padding-top: 4em;
 }
 
-.loading_content > p {
+.loading_content>p {
     margin-top: -1em;
 }
 
@@ -467,20 +459,33 @@ a {
 }
 
 
+#next,
+#previous {
+    text-align: center;
+    margin: 1em;
+    padding: 1em;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+}
 
- /* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) { 
-    .card__wrapper{
+
+
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .card__wrapper {
         width: 40%;
     }
 
     .loader {
         width: 40%;
     }
- }
+}
 
 /* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) { 
+@media (min-width: 992px) {
     .card__wrapper {
         width: 40%;
     }
@@ -488,10 +493,10 @@ a {
     .loader {
         width: 40%;
     }
- }
+}
 
 /* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) { 
+@media (min-width: 1200px) {
     .card__wrapper {
         width: 28%;
     }
@@ -499,4 +504,4 @@ a {
     .loader {
         width: 28%;
     }
- }
+}
