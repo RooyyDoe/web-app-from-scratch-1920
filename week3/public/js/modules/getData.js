@@ -26,8 +26,8 @@ export function getGames(genre) {
         .then((data) => {
             console.log(data)
             // Getting the next, previous page fetch URL
-            let nextPage = data.next;
-            let previousPage = data.previous;
+            let nextPage = data.next
+            let previousPage = data.previous
 
             // Creating a button for previous
             const previousButton = document.createElement('button')
@@ -49,9 +49,9 @@ export function getGames(genre) {
             // Else it will show it. This is for the zero state when
             // the first data will be shown.
             if (previousPage === null) {
-                document.getElementById('previous').style.display = 'none';
+                document.getElementById('previous').style.display = 'none'
             } else {
-                document.getElementById('previous').style.display = 'inline-block';
+                document.getElementById('previous').style.display = 'inline-block'
             }
 
             // Adds a event listener to the button with a new fetch inside of it
@@ -67,9 +67,9 @@ export function getGames(genre) {
                         nextPage = data.next
                         previousPage = data.previous
                         if (previousPage === null) {
-                            document.getElementById('previous').style.display = 'none';
+                            document.getElementById('previous').style.display = 'none'
                         } else {
-                            document.getElementById('previous').style.display = 'inline-block';
+                            document.getElementById('previous').style.display = 'inline-block'
                         }
                         renderGames(data)
                     })
@@ -84,16 +84,14 @@ export function getGames(genre) {
                         previousPage = data.previous
                         console.log(data)
                         if (previousPage === null) {
-                            document.getElementById('previous').style.display = 'none';
+                            document.getElementById('previous').style.display = 'none'
                         } else {
-                            document.getElementById('previous').style.display = 'inline-block';
+                            document.getElementById('previous').style.display = 'inline-block'
                         }
                         renderGames(data)
                     })
             })
-
-            // }
-            return data;
+            return data
         })
 
 }
