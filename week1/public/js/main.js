@@ -23,6 +23,7 @@ import createCard from '../modules/createCard.js';
         
         return Fetcher.get(url)
         .then(({results:gameResults, next} ) => {
+            console.log(next)
             gameResults.forEach(data => {  
                 container.appendChild(createCard(data, container))
             })

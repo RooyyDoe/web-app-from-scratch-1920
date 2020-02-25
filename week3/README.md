@@ -1,8 +1,7 @@
-### Week 3 - Wrapping up 🎁
+### Week 2 - Design and Refactor 🛠
 
-Goal:
-Manipulate data. Split code into modules. Reflect on end result
+Goal: Design the web app. Add routes and states. Rendering detail page.
 
-[Excercises](https://github.com/cmda-minor-web/web-app-from-scratch-1920/blob/master/course/week-3.md)
+[Excercises](https://github.com/cmda-minor-web/web-app-from-scratch-1920/blob/master/course/week-2.md)
 
-[Slides](https://drive.google.com/open?id=1BSzGYNLMgtHD4HRnK7f0DgyTv4Pg3xsQwD_eYNo7v0Y)
+[Slides](https://drive.google.com/open?id=1IqQeu1m0dQiSC_KCvrn8eencAgtYe7X6qT-gm0n9Bmc)
