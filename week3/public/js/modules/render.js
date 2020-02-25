@@ -19,9 +19,27 @@ export function renderGames(gamesData) {
 
     console.log(gamesData)
 
-    gamesData.results.map(object => {
-        console.log(object)
-    })
+    // addEventListener
+    // console.log(sortAlphabetical(gamesData.results))
+    // let x = gamesData.results.sort(function(a, b) {
+    //     return a.name.localeCompare(b.name.toLowerCase());
+    //  });
+
+    //  console.log(x)
+
+
+    //  let v = gamesData.results.sort((highest, lowest) => highest.rating - lowest.rating)
+
+    //  console.log(v)
+
+    // [gamesData].sort((highest, lowest) => { if (highest.name < lowest.name) return -1 })
+
+    // gamesData.results.map(object => {
+    //     console.log(object)
+
+    //     data.sort((a, b) => { if (a.name < b.name) return -1 })
+    // })
+
     const gamesTemplate = document.getElementById("gamesTemplate").textContent;
     const compiledTemplate = Handlebars.compile(gamesTemplate, gamesData);
     const gamesGeneratedHTML = compiledTemplate(gamesData);
@@ -29,6 +47,14 @@ export function renderGames(gamesData) {
     const gamesContainer = document.getElementById('main');
     gamesContainer.insertAdjacentHTML("afterbegin", gamesGeneratedHTML);
 
+    const dropDown = document.querySelector('.sort-games')
+    dropDown.addEventListener('change', () => {
+        const selectValue = dropDown.options[dropDown.selectedIndex].value;
+
+        const sortedData = sortAlphabetical(gamesData.results, selectValue)
+        console.log("test", sortedData)
+        renderGames(sortedData)
+    })
 }
 
 export function renderGameDetails(gameDetailsData) {
