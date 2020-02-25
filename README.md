@@ -312,12 +312,15 @@ This will be returning the following data of the game:
 
 ***
 
-
-
 ## Sources
 
 * [Mozilla Developer Network](https://developer.mozilla.org/en-US/) - I mostly used this site to obtain my sources
 * [API Docs](https://api.rawg.io/docs/) - Instructions on how to use this API.
+* [Handlebars.js](https://handlebarsjs.com/guide/#what-is-handlebars) - Everything I needed to know about handlebars.
+* [Routie.js](http://projects.jga.me/routie/) - Everything I needed to know about Routie
+* [Sorting A - Z](https://stackoverflow.com/questions/8900732/sort-objects-in-an-array-alphabetically-on-one-property-of-the-array) - Sorting an object in an array on alphabetical A - Z and Z - A.
+* [Sorting eventlistener](https://stackoverflow.com/questions/51033185/addeventlistener-onchange-dropdown-selected-value-javascript) - How I got my value into a eventlistener.
+* [.map, .filter, .reduce](https://medium.com/poka-techblog/simplify-your-javascript-use-map-reduce-and-filter-bd02c593cc2d) - Explained so I could understand.
 
 ## Credits
 
