@@ -20,7 +20,6 @@ export async function gamesOverview(genre) {
     try {
         showLoadingAnimation()
         const gamesData = getGames(genre) 
-        console.log(await gamesData)
         renderGames(await gamesData)
     } catch(err) {
         console.log(err)

@@ -1,4 +1,4 @@
-// import { sortData } from './utils.js'
+import { sortAlphabetical } from './utils.js'
 
 export function renderGenre(genreData) {
     
@@ -17,6 +17,11 @@ export function renderGames(gamesData) {
     const children = main.children;
     main.removeChild(children[0])
 
+    console.log(gamesData)
+
+    gamesData.results.map(object => {
+        console.log(object)
+    })
     const gamesTemplate = document.getElementById("gamesTemplate").textContent;
     const compiledTemplate = Handlebars.compile(gamesTemplate, gamesData);
     const gamesGeneratedHTML = compiledTemplate(gamesData);
