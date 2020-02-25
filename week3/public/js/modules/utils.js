@@ -18,10 +18,10 @@ export function sortAlphabetical(data, selectValue) {
             data.sort((highest, lowest) => lowest.name.localeCompare(highest.name.toLowerCase()))
             break
         case "hoog":
-            data.sort((highest, lowest) => highest.rating - lowest.rating)
+            data.sort((highest, lowest) => lowest.rating - highest.rating)
             break
         case "laag":
-            data.sort((highest, lowest) => lowest.rating - highest.rating)
+            data.sort((highest, lowest) => highest.rating - lowest.rating)
             break
     }
     const dataObj = {

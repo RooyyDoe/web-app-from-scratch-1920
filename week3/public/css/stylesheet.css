@@ -63,7 +63,7 @@ a {
 }
 
 .card__content>a>h1 {
-    font-size: 2em;
+    font-size: 1.7em;
     max-width: 80%;
     text-align: center;
     color: white;
@@ -503,7 +503,7 @@ a {
     line-height: 3;
     background-color: white;
     border-radius: 1em;
-    position: absolute;
+    position: fixed;
     z-index: 502;
     top: 4%;
 }
